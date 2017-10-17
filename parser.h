@@ -15,3 +15,5 @@
  * Deklarace funkci použitých při syntaktické analýze.
  */
 
+ int parser();
+ int scope();
