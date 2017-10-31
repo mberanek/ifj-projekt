@@ -91,13 +91,10 @@
  */
 
 //struktura typu tokenu
-typedef struct token_type{
-    int token;      //typ tokenu
+typedef struct {
+    int type;      //typ tokenu
     char *value;    //pokud je literal, pak jeho hodnota, jinak NULL
-}token_type;
+} tToken;
 
-//deklarace funkci
-
-//funkce vraci ciselny kod tokenu a do value ulozi hodnotu literalu (nebo null pokud token neni literal)
-int get_token(string *value); //TODO knihovnu pro praci s retezci
+extern tToken token;
 

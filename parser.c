@@ -18,3 +18,49 @@
  */
 
 
+int parser()
+{
+
+    int error;
+    while(token = getToken() != SCOPE)
+    //Deklarace a definice před Scope
+    {
+        if(token.type == ENDOF)
+        //Nenašel jsem SCOPEĵ
+        {
+
+        }
+    }
+
+    error = scope();
+    if(error != ERR_OK)
+    {
+        return error;
+    }
+
+    token = getToken();
+    if(token.type != ENDOF)
+    //End Scope neni posledni
+    {
+        return NOTEOF;
+    }
+
+    return EOK;
+}
+
+int scope()
+{
+    int error;
+    token = getToken();
+    while(token = getToken() != ENDSCOPE || token != ENDOF)
+    {
+        if()
+    }
+    if(token != ENDSCOPE)
+    //Neni END Scope
+    {
+        return NOTENDSCOPE;
+    }
+    return ERR_OK;
+}
+

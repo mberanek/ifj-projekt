@@ -16,6 +16,27 @@
  * Deklarace datové struktury binární vyhledávací strom a základních funkcí nad ní,
  */
 
+typedef struct{
+   char *name;
+   tType type;
+} tSymbol, *tSymbolPtr;
 
+typedef struct tNode{
+   char *key;
+   tSymbol data;
+   struct tNode *lPtr;
+   struct tNode *rPtr;
+} *tNodePtr;
+
+/*GLOBAL*/
+extern tNodePtr st;
+
+
+void stInit();
+void stInsert(tNodePtr root, char *key, tSymbol data);
+void stDispose();
+void btDispose(tNodePtr root);
+tNodePtr stSearch(char *key);
+tNodePtr btSearch(tNodePtr root, char *key);
 
 
